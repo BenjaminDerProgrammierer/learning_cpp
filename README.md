@@ -2,4 +2,4 @@
 
 ## Resources
 
-* [The "Beginning C++ Programming - From Beginner to Beyond course"](https://dynatrace.udemy.com/course/beginning-c-plus-plus-programming/learn/)
+* [The "Beginning C++ Programming - From Beginner to Beyond course"](https://www.udemy.com/course/beginning-c-plus-plus-programming/)
