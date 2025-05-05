@@ -1,0 +1,22 @@
+{
+  "name": "clean-build-status-bar",
+  "displayName": "Clean Build Status Bar",
+  "description": "Adds a status bar item to clean build files",
+  "version": "0.0.1",
+  "publisher": "user",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "clean-build-status-bar.cleanBuildFiles",
+        "title": "Clean Build Files"
+      }
+    ]
+  }
+}

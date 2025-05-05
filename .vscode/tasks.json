@@ -1,0 +1,60 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build active file",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/out/${fileBasenameNoExtension}"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Builds the currently open C++ file",
+			"dependsOn": [
+				"create build folder"
+			]
+		},
+		{
+			"label": "create build folder",
+			"type": "shell",
+			"command": "mkdir",
+			"args": [
+				"-p",
+				"${fileDirname}/out"
+			]
+		},
+		{
+			"label": "clean build files",
+			"type": "shell",
+			"command": "find",
+			"args": [
+				"${workspaceFolder}",
+				"-type",
+				"d",
+				"-name",
+				"out",
+				"-exec",
+				"rm",
+				"-rf",
+				"{}",
+				"\\;",
+				"-o",
+				"-path",
+				"*/out/*",
+				"-delete"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "Removes all build files (out directories) in the project"
+		}
+	]
+}
